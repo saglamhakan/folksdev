@@ -16,6 +16,8 @@ public class Transaction {
     @GenericGenerator(name = "UUID", strategy = "org.hibernate.id.UUIDGenerator")
     private String id;
     private TransactionType transactionType = TransactionType.INITIAL;
+
+
     private BigDecimal amount;
     private LocalDateTime transactionDate;
 
@@ -31,9 +33,11 @@ public class Transaction {
         this.initialCredit=initialCredit;
         this.account=account;
 
-
     }
 
+    public Transaction(BigDecimal amount) {
+        this.amount = amount;
+    }
 
 
     public String getId() {

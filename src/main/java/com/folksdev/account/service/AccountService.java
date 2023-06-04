@@ -35,6 +35,7 @@ public class AccountService {
           //  Transaction transaction = transactionService.initiateMoney(account,createAccountRequest.getInitialCredit());
             Transaction transaction = new Transaction(createAccountRequest.getInitialCredit(), account);
             transaction.setTransactionDate(LocalDateTime.now());
+            transaction.setAmount(createAccountRequest.getInitialCredit());
             account.getTransaction().add(transaction);
         }
 

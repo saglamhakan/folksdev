@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Set;
 
 @Entity
-public class Account implements Serializable {
+public class Account implements Serializable { //Eğer bunu kotlinle yazarsan ve Accountun altı kırmızı yanarsa noarg adında bi dependency eklemelisin
 
     @Id
     @GeneratedValue(generator = "UUID")
