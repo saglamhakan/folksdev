@@ -17,7 +17,7 @@ public class Customer {
     private String name;
     private String surname;
 
-    @OneToMany(mappedBy = "customer", fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "customer", fetch = FetchType.EAGER)
     private Set<Account> accounts;
 
     public Customer() {}

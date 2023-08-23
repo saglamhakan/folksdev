@@ -21,7 +21,7 @@ public class Account implements Serializable { //Eğer bunu kotlinle yazarsan ve
     private BigDecimal balance;
     private LocalDateTime creationDate;
 
-    @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.MERGE)
     @JoinColumn(name = "customer_id", nullable = false)
     private Customer customer;
 
